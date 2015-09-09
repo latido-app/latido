@@ -6,15 +6,13 @@ void keyPressed()
     {
       previousButton (0);
     }
-  }
-  else if (keyCode == RIGHT)
+  } else if (keyCode == RIGHT)
   {
     if (!gui.getController("nextButton").isLock())
     {
       nextButton (0);
     }
-  }
-  else sendOscFloat("/rhy", module.rhythm ? 1 : 0);
+  } else sendOscFloat("/rhy", module.rhythm ? 1 : 0);
 }
 
 /*
@@ -260,11 +258,11 @@ public void watchdogPD ()
 
 /*
 public void latencyPD(float f)
-{
-  println(f);
-  gui.getController("latencyInSlider").setValue(int(f));
-}
-*/
+ {
+ println(f);
+ gui.getController("latencyInSlider").setValue(int(f));
+ }
+ */
 
 public void scorePD (float theScore)
 {
@@ -369,7 +367,7 @@ void saveCallback(File f)
 
 void websiteLink (int v)
 {
-  link("http://joel.matthysmusic.com/contact/");
+  link("http://joel.matthysmusic.com/contact.html");
 }
 
 void setLock(Controller theController, boolean theValue)
