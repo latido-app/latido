@@ -1,6 +1,20 @@
 void keyPressed()
 {
-  sendOscFloat("/rhy", module.rhythm ? 1 : 0);
+  if (keyCode == LEFT)
+  {
+    if (!gui.getController("previousButton").isLock())
+    {
+      previousButton (0);
+    }
+  }
+  else if (keyCode == RIGHT)
+  {
+    if (!gui.getController("nextButton").isLock())
+    {
+      nextButton (0);
+    }
+  }
+  else sendOscFloat("/rhy", module.rhythm ? 1 : 0);
 }
 
 /*
